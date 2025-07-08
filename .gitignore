@@ -1,0 +1,29 @@
+# 🐍 Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# 🐍 Django
+*.sqlite3
+*.log
+.env
+
+# 🔧 Entorno virtual
+venv/
+env/
+ENV/
+
+# ⚙️ Configuración de IDEs
+.vscode/
+.idea/
+
+# 📦 Archivos de paquetes
+*.egg-info/
+dist/
+build/
+
+# 💻 Archivos del sistema
+.DS_Store
+Thumbs.db
