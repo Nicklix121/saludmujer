@@ -16,7 +16,7 @@ class PatientSerializer(serializers.Serializer):
     health_provider = serializers.CharField()
     created_at = serializers.DateTimeField()
     updated_at = serializers.DateTimeField()
-    
+
     def create(self, validated_data):
         return Patient(**validated_data).save()
 

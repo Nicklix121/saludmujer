@@ -5,7 +5,7 @@ from .models import Patient
 from .serializers import PatientSerializer
 from datetime import datetime
 
-class ListaDePacientes(APIView):  # /pacientes/
+class ListaDePacientes(APIView):
     def get(self, request):
         patients = Patient.objects.all()
         serializer = PatientSerializer(patients, many=True)
