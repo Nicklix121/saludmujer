@@ -6,7 +6,6 @@
 
 ```bash
 git clone https://github.com/Nicklix121/saludmujer.git
-cd saludmujer
 ```
 
 
@@ -14,6 +13,7 @@ cd saludmujer
 ```bash
 python -m venv env
 env\Scripts\activate
+cd saludmujer
 ```
 
 ### 2. Instalar dependencias
