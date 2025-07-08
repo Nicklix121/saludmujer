@@ -141,7 +141,14 @@ Authorization: Bearer <token_access>
     "first_name": "Camila",
     "last_name": "Rojas",
     "run": "12345678-9",
-    ...
+    "email": "camila@example.com",
+    "phone": "+56912345678",
+    "birth_date": "1992-05-10",
+    "gender": "F",
+    "region": "Región Metropolitana",
+    "city": "Santiago",
+    "address": "Calle Falsa 123",
+    "health_provider": "Fonasa"
   }
 ]
 ```
