@@ -34,6 +34,7 @@ pip install django djangorestframework djongo djangorestframework-simplejwt pymo
 
 En `settings.py`, asegúrate de configurar:
 
+Paso 1:  eliminar esta lineas
 ```python
 DATABASES = {
     'default': {
@@ -42,54 +43,15 @@ DATABASES = {
     }
 }
 ```
+Paso 2:  agregar estas lineas para conectarse con MOGO DB
 
----
+```python
 
-## Migraciones y ejecución
+from mongoengine import connect
 
-```bash
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
+connect(
+    db='nombre_de_tu_base',
+    host='localhost',
+    port= numero_de_puerto
+)
 ```
-
----
-
-## Autenticación JWT
-
-### Obtener token:
-
-```http
-POST /api/token/
-{
-  "username": "usuario",
-  "password": "contraseña"
-}
-```
-
-### Usar token:
-
-Agregar en los headers:
-
-```
-Authorization: Bearer <access_token>
-```
-
----
-
-## Endpoints principales
-
-| Método | URL               | Acción             |
-|--------|-------------------|--------------------|
-| GET    | /patients/        | Listar pacientes   |
-| POST   | /patient/         | Crear paciente     |
-| GET    | /patient/<id>     | Ver paciente       |
-| PUT    | /patient/<id>     | Actualizar paciente|
-| DELETE | /patient/<id>     | Eliminar paciente  |
-
----
-
-## Notas
-
-- Las respuestas son en formato JSON.
-- JWT es requerido para acceder a la mayoría de los endpoints.
