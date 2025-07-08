@@ -34,16 +34,7 @@ pip install django djangorestframework djongo djangorestframework-simplejwt pymo
 
 En `settings.py`, asegúrate de configurar:
 
-Paso 1:  eliminar esta lineas
-```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'nombre_de_tu_base',
-    }
-}
-```
-Paso 2:  agregar estas lineas para conectarse con MOGO DB
+agregar estas lineas para conectarse con MOGO DB
 
 ```python
 
